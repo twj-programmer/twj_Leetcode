@@ -29,8 +29,9 @@ char* addBinary(char* a, char* b) {
         sprintf(&ans[cnt++], "%d", (sum + pre) % 2);
         pre = (sum + pre) / 2;
         i--, j--;
-        if (i < 0 && j < 0)
+        if (i < 0 && j < 0) {
             break;
+        }
     }
     if (pre) {
         sprintf(&ans[cnt++], "%d", pre);
